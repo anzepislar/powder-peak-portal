@@ -7,7 +7,7 @@ import TripSchedule from './pages/TripSchedule'
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       <Header />
       <main className="flex-1">
         <Routes>

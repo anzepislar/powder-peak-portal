@@ -3,10 +3,29 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 202 33% 98%;
+    --foreground: 207 45% 14%;
+    --surface: 0 0% 100%;
+    --primary: 197 83% 34%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 43 95% 55%;
+    --accent-foreground: 207 45% 14%;
+    --muted: 200 23% 94%;
+    --muted-foreground: 205 18% 40%;
+    --border: 200 22% 86%;
+  }
   html {
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-slate-50 text-slate-900 antialiased;
+    @apply bg-background text-foreground antialiased font-sans;
   }
+  h1, h2, h3 { @apply font-display; }
+  ::selection { @apply bg-accent text-accent-foreground; }
+}
+
+@layer utilities {
+  .section-shell { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12; }
+  .eyebrow { @apply text-xs font-bold uppercase text-primary; letter-spacing: .16em; }
 }

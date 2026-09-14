@@ -1,21 +1,25 @@
 import { Link } from 'react-router-dom'
-import { Calendar } from 'lucide-react'
+import { ArrowRight, BusFront, Clock3 } from 'lucide-react'
 
 function Trips() {
   return (
-    <section id="izleti" className="py-24 bg-slate-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-alpine-900 mb-6">Izleti</h2>
-        <p className="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-          Vsako zimo organiziramo vrsto smučarskih izletov na Zoncolan in druge zanimive destinacije. Preverite razpored in se nam pridružite na snegu.
-        </p>
+    <section id="izleti" className="bg-primary py-20 text-primary-foreground md:py-28">
+      <div className="section-shell grid gap-12 lg:grid-cols-[.75fr_1.25fr] lg:gap-20">
+        <div><p className="text-xs font-bold uppercase text-accent" style={{ letterSpacing: '.16em' }}>Program izletov</p><h2 className="mt-4 text-4xl font-extrabold md:text-6xl">Na sneg<br />z nami</h2></div>
+        <div>
+          <p className="max-w-2xl text-lg leading-8 text-primary-foreground/85">Večino izletov izpeljemo ob sobotah. Ob 6:00 zjutraj z avtobusom krenemo s parkirišča pri nekdanji izolski ladjedelnici. Kdor se izleta udeleži z lastnim prevozom, mora na smučišče prispeti pravočasno za začetek smučarske šole.</p>
+          <div className="mt-8 flex flex-wrap gap-8 border-t border-primary-foreground/25 pt-7">
+            <div className="flex items-center gap-3"><BusFront className="h-6 w-6 text-accent" /><span><strong className="block">Odhod ob 6:00</strong><small className="text-primary-foreground/65">Izolska ladjedelnica</small></span></div>
+            <div className="flex items-center gap-3"><Clock3 className="h-6 w-6 text-accent" /><span><strong className="block">Začetek 9:15–9:30</strong><small className="text-primary-foreground/65">Smučarska šola</small></span></div>
+          </div>
         <Link
           to="/razpored-izletov"
-          className="inline-flex items-center gap-2 bg-alpine-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-alpine-800 transition-colors"
+          className="mt-10 inline-flex h-12 items-center gap-2 rounded-md bg-accent px-6 text-sm font-bold text-accent-foreground transition-transform hover:-translate-y-0.5"
         >
-          <Calendar className="w-5 h-5" />
           Razpored izletov
+          <ArrowRight className="h-4 w-4" />
         </Link>
+        </div>
       </div>
     </section>
   )

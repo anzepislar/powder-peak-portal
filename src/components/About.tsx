@@ -1,15 +1,20 @@
 function About() {
   return (
-    <section id="o-nas" className="py-24 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-alpine-900 mb-8">O nas</h2>
-        <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed">
-          <p className="mb-6">
-            Za tiste, ki nas še ne poznate. Smučarski klub Izola je mlad kolektiv z več kot 25 letno tradicijo. Smo smučarski zanesenjaki, polni želje in volje predajati znanje in izkušnje na mlade in jih tako navdušiti za najlepšega od vseh športov. Naš cilj je na sneg spraviti čim več otrok in tudi tistih na najmlajših, ter jih naučiti vijuganja po belih strminah. V klubu deluje prek 45 učiteljev z licencami za učenje smučanja in deskanja.
-          </p>
-          <p className="italic text-slate-500">
-            Per coloro che ancora non ci conoscono. Lo Sci Club Isola è un giovane collettivo con oltre 25 anni di tradizione. Siamo appassionati di sci, pieni di voglia e volontà di trasmettere conoscenze ed esperienze ai più giovani, entusiasmandoli per lo sport più bello di tutti. Il nostro obiettivo è portare sulla neve il maggior numero di bambini, anche i più piccoli, e insegnare loro a scivolare lungo i pendii bianchi. Nel club operano oltre 45 insegnanti con licenza per l'insegnamento dello sci e dello snowboard.
-          </p>
+    <section id="o-nas" className="bg-surface py-20 md:py-28">
+      <div className="section-shell grid gap-12 lg:grid-cols-[.75fr_1.25fr] lg:gap-20">
+        <div>
+          <p className="eyebrow">Naša zgodba</p>
+          <h2 className="mt-4 text-4xl font-extrabold leading-tight md:text-6xl">O nas</h2>
+          <div className="mt-8 h-1 w-16 bg-accent" />
+          <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-7">
+            <div><strong className="block font-display text-4xl text-primary">25+</strong><span className="mt-1 block text-sm text-muted-foreground">let tradicije</span></div>
+            <div><strong className="block font-display text-4xl text-primary">45+</strong><span className="mt-1 block text-sm text-muted-foreground">licenciranih učiteljev</span></div>
+          </div>
+        </div>
+        <div className="space-y-6 text-base leading-8 text-muted-foreground md:text-lg">
+          <p>Za tiste, ki nas še ne poznajo. Smučarski klub Izola je mlad kolektiv z več kot 25-letno tradicijo. Smo smučarski zanesenjaki, polni želje in volje predajati znanje in izkušnje mladim ter jih tako navdušiti za najlepšega od vseh športov.</p>
+          <p>Naš cilj je na sneg spraviti čim več otrok, tudi tistih najmlajših, ter jih naučiti vijuganja po belih strminah.</p>
+          <p>V klubu deluje prek 45 učiteljev z licencami za učenje smučanja in deskanja na snegu, pridobljenimi pri Zvezi učiteljev in trenerjev smučanja Slovenije (ZUTS). Poleg prenašanja znanja je naša glavna skrb varnost na smučeh. Le tako bo smučanje pravi užitek.</p>
         </div>
       </div>
     </section>
