@@ -1,24 +1,31 @@
 import { Link } from 'react-router-dom'
+import { ArrowRight, Clock3, MapPin, Ticket } from 'lucide-react'
+import skiSchoolImage from '../assets/ski-school.jpg'
 
 function SkiSchool() {
   return (
-    <section id="smucarska-sola" className="py-24 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-alpine-900 mb-8">Smučarska šola</h2>
-        <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed mb-10">
-          <p className="mb-6">
-            Pridružite se nam na 1. izletu in uživajte v prekrasnih razgledih in odlično pripravljenih smučarskih progah na Zoncolanu. Naši izleti potekajo vsako soboto v času zimske sezone. Za vse udeležence smučarske šole velja obvezna prijava, ki se izvede na prvem izletu. Starši boste pravočasno obveščeni na vaš elektronski naslov. Prvi izlet bo potekal v soboto ob določenem datumu na našem tradicionalnem smučišču Zoncolan. NAKUP KART – Smučarski klub Izola smučarske karte svojim članom prodaja na dan smučarskega izleta na parkirišču smučišča Zoncolan med 8.50 in 9.05 uro. Prodajno mesto je vidno označeno z našo zastavo.
-          </p>
-          <p className="italic text-slate-500">
-            Unitevi a noi alla prima gita e godetevi panorami mozzafiato e piste da sci perfettamente preparate sullo Zoncolan. Le nostre gite si svolgono ogni sabato durante la stagione invernale. Per tutti i partecipanti alla scuola di sci è obbligatoria l'iscrizione, che avviene durante la prima gita. I genitori saranno tempestivamente informati al vostro indirizzo email. La prima gita si svolgerà di sabato in una data da definire sulla nostra tradizionale località sciistica dello Zoncolan. ACQUISTO BIGLIETTI – Lo Sci Club Isola vende ai propri soci i biglietti da sci il giorno della gita sul parcheggio della stazione sciistica dello Zoncolan dalle 8.50 alle 9.05. Il punto vendita è visibilmente segnalato con la nostra bandiera.
-          </p>
+    <section id="smucarska-sola" className="bg-surface py-20 md:py-28">
+      <div className="section-shell">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="relative">
+            <img src={skiSchoolImage} loading="lazy" width={1408} height={1008} alt="Otroci z učiteljem v smučarski šoli" className="aspect-[4/3] w-full rounded-md object-cover" />
+            <div className="absolute bottom-5 left-5 rounded-md bg-accent px-4 py-3 text-accent-foreground"><strong className="font-display text-xl">Zoncolan</strong><span className="block text-xs font-semibold">naša domača strmina</span></div>
+          </div>
+          <div>
+            <p className="eyebrow">Znanje in varnost</p>
+            <h2 className="mt-4 text-4xl font-extrabold md:text-6xl">Smučarska šola</h2>
+            <p className="mt-7 leading-8 text-muted-foreground">Smučarsko šolo izvajamo na smučišču Ravascletto–Zoncolan v sosednji Furlaniji Julijski krajini. Od Izole je smučišče oddaljeno približno dve uri vožnje. Na dan izleta organiziramo tudi avtobusni prevoz, ki je možen po predhodni prijavi, plačilu in do zasedenosti vseh mest.</p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="flex gap-3 border-t border-border pt-4"><MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-semibold">Ravascletto–Zoncolan</span></div>
+              <div className="flex gap-3 border-t border-border pt-4"><Clock3 className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span className="text-sm font-semibold">Približno 2 uri iz Izole</span></div>
+            </div>
+          </div>
         </div>
-        <Link
-          to="/galerija"
-          className="inline-flex items-center gap-2 bg-alpine-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-alpine-800 transition-colors"
-        >
-          Galerija
-        </Link>
+        <div className="mt-16 grid gap-px overflow-hidden rounded-md border border-border bg-border md:grid-cols-3">
+          <div className="bg-foreground p-7 text-primary-foreground"><Ticket className="h-6 w-6 text-accent" /><h3 className="mt-5 text-xl font-bold">Smučarske vozovnice</h3><p className="mt-3 text-sm leading-6 text-primary-foreground/70">Člani jih na dan izleta prevzamejo na parkirišču ob zastavi Smučarskega kluba Izola med 8:40 in 8:55.</p></div>
+          <div className="bg-surface p-7"><h3 className="text-xl font-bold">Programi učenja</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">Izleti praviloma potekajo ob sobotah. O morebitnih odpovedih in spremembah vas pravočasno obvestimo po e-pošti.</p></div>
+          <div className="flex flex-col justify-between bg-accent p-7 text-accent-foreground"><div><h3 className="text-xl font-bold">Z nami na snegu</h3><p className="mt-3 text-sm leading-6">Oglejte si utrinke z naših izletov in smučarske šole.</p></div><Link to="/galerija" className="mt-8 inline-flex items-center gap-2 text-sm font-bold">Odpri galerijo <ArrowRight className="h-4 w-4" /></Link></div>
+        </div>
       </div>
     </section>
   )
